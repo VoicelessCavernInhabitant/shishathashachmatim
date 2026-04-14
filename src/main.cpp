@@ -2,13 +2,14 @@
 #include <raylib.h>
 #include <cmath>
 #include "graphics/drawfield.hpp"
+#include "pavel.h"
 
 
 int main(void)
 {
 
-    const int screenWidth = 999;
-    const int screenHeight = 500;
+    const int screenWidth = 1500;
+    const int screenHeight = 1000;
 
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
     
@@ -19,25 +20,19 @@ int main(void)
 	Pawn1* pavel = new Pawn1(1);
 	pieceList[69] = pavel;
 	pavel->getMoves(69);
-	
 
 	
-
     while (!WindowShouldClose())    
     {
         BeginDrawing();
 		
             ClearBackground(RAYWHITE);
-            drawField({69, 450}, 30);
+            drawField({400, 900}, 30);
 
         EndDrawing();
 		
     }
-
-
     CloseWindow();
-
-
     return 0;
 }
 

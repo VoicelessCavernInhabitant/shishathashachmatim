@@ -3,7 +3,9 @@
 #include <map>
 #include "../boardmath/elementarymoves.h"
 
+
 std::map<int, Piece*> pieceList;
+
 
 void movePListElementPiece(int start, int end){
     pieceList.erase(end);

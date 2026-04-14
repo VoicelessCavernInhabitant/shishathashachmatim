@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 cmake_minimum_required(VERSION 3.0)
-=======
-cmake_minimum_required(VERSION 3.0)
->>>>>>> 9a85a53417955fc0dfa35d0128a81efee1e76f0e
 project(my_raylib_game CXX)
 
 set(CMAKE_CXX_STANDARD 23)

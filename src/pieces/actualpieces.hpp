@@ -12,7 +12,7 @@ public:
     }
     
     void getMoves(int pos) override {
-        int temp = rightUp(pos);
+        int temp = rightUp(pos); 
         if (isEmpty(temp)) {
             temp = rightUp(temp);
             if (temp != 0 and isFriend(temp, this->getSide()) == false) this->validMoves.push_back(temp);

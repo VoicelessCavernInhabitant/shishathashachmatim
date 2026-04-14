@@ -20,6 +20,7 @@ public:
     std::vector<int>validMoves;
 
     virtual void getMoves(int pos) = 0;
+    
     ~Piece(){}
     Piece(bool side){
         this->side = side;
