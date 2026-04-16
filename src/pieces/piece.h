@@ -22,13 +22,19 @@ public:
     virtual void getMoves(int pos) = 0;
     
     ~Piece(){}
-    Piece(bool side){
+    Piece(bool side, std::string name){
         this->side = side;
+        this->name = name;
 
     }
     
-    virtual bool getSide() = 0;
-    virtual std::string getName() = 0;
+    virtual bool getSide(){
+        return this->side;
+    }
+
+    virtual std::string getName(){
+        return this->name;
+    }
 
     void printMoves(){
         for (int move : this->validMoves) {
@@ -43,7 +49,7 @@ public:
 
     
 
-    virtual void drawTexture(Vector2 pos) = 0;
+
 
 };
 

@@ -7,8 +7,8 @@
 
 class Pawn1 : public Piece {
 public:
-    Pawn1(bool side) : Piece(side){
-        this->name = "Pawn1";
+    Pawn1(bool side) : Piece(side, "Pawn1"){
+        
     }
     
     void getMoves(int pos) override {
@@ -26,17 +26,8 @@ public:
         
     }
 
-    bool getSide() override {
-        return this->side;
-    }
 
-    std::string getName() override {
-        return this->name;
-    }
 
-    void drawTexture(Vector2 pos) override {
-        DrawTexture(this->texture, pos.x, pos.y, WHITE);
-    }
 
 
     
@@ -47,7 +38,7 @@ public:
 class Pawn2 : public Piece{
 public:
 
-    Pawn2(bool side) : Piece(side){
+    Pawn2(bool side) : Piece(side, "Pawn2"){
         this->name = "Pawn2";
     }
 
@@ -72,19 +63,13 @@ public:
         
     }
 
-    bool getSide() override {
-        return this->side;
-    }
 
-    std::string getName() override {
-        return this->name;
-    }
 };
 
 class Horse : public Piece{
 public:
 
-    Horse(bool side) : Piece(side){
+    Horse(bool side) : Piece(side, "Horse"){
         this->name = "Horse";
     }
 
@@ -181,18 +166,9 @@ public:
         }
     }
 
-    void drawTexture(Vector2 pos) override {
-        DrawTexture(this->texture, pos.x, pos.y, WHITE);
-    }
 
 
-    bool getSide() override {
-        return this->side;
-    }
 
-    std::string getName() override {
-        return this->name;
-    }
 };
 
 class King : public Piece{
@@ -222,17 +198,13 @@ public:
         std::cout << "this is a wizard";
     }
 
-    std::string getName() override {
-        return this->name;
-    }
 
-    Wizard(bool side) : Piece(side){
+
+    Wizard(bool side) : Piece(side, "Wizard"){
         this->name = "Wizard";
     }
 
-    bool getSide() override {
-        return this->side;
-    }
+
 };
 
 class Rook : public Piece{

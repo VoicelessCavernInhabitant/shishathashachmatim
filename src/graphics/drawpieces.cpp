@@ -3,18 +3,16 @@
 #include <cstdlib>
 #include "../boardmath/findcords.h"
 #include <raylib.h>
+#include "textures.h"
 
 
 
-void drawPieces(Vector2 origin, float size, Texture* tex){
+
+void drawPieces(Vector2 origin, float size){
     for (auto piece : pieceList){
         Vector2 relative = findCords(piece.first, size);
-
-
-
-            for (auto move : piece.second->validMoves){
-                Vector2 rel = findCords(move, size);
-                DrawCircle(origin.x + rel.x, origin.y - rel.y, 25, BLACK);
-            }   
+        if (textures.count(piece.second->getName())){ 
+            DrawTexture(textures[piece.second->getName()], origin.x + relative.x, origin.y + relative.y, WHITE);
         }
     }
+}
