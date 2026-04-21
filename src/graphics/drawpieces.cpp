@@ -9,10 +9,15 @@
 
 
 void drawPieces(Vector2 origin, float size){
-    for (auto piece : pieceList){
+    for (auto const& piece  : pieceList){
         Vector2 relative = findCords(piece.first, size);
-        if (textures.count(piece.second->getName())){ 
-            DrawTexture(textures[piece.second->getName()], origin.x + relative.x, origin.y + relative.y, WHITE);
+        Piece* paulus = piece.second;
+
+
+        if (textures.contains(paulus->getName())){ 
+            DrawTexture(textures[paulus->getName()], origin.x + relative.x + 0.25 * size, origin.y + relative.y - 0.5 * size, WHITE);
         }
+           
+
     }
 }

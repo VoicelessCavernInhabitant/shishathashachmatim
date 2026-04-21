@@ -22,18 +22,18 @@ public:
     virtual void getMoves(int pos) = 0;
     
     ~Piece(){}
+
     Piece(bool side, std::string name){
         this->side = side;
         this->name = name;
-
     }
     
-    virtual bool getSide(){
+    bool getSide(){
         return this->side;
     }
 
-    virtual std::string getName(){
-        return this->name;
+    std::string getName(){
+        return name;
     }
 
     void printMoves(){

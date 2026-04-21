@@ -1,7 +1,12 @@
 #include "raylib.h"
 #include "textures.h"
 
-void loadTextures(){
-    Image image = LoadImage("/home/silentcavesdweller/coding/shishathashachmatim/raylib-cmake-template/assets/textures/pawn1.png");
-    textures["Pawn1"] = LoadTextureFromImage(image);
+void loadTextures(float size){
+    Image image = LoadImage("../assets/textures/pawn1.png");
+    ImageResize(&image, size, image.height / image.width * size);
+    textures.insert({"Pawn1", LoadTextureFromImage(image)});
+
+    image = LoadImage("../assets/textures/horse.png");
+    ImageResize(&image, size, image.height / image.width * size);
+    textures.insert({"Horse", LoadTextureFromImage(image)});
 }

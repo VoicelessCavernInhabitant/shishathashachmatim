@@ -1,3 +1,3 @@
 
 
-void loadTextures();
+void loadTextures(float size);

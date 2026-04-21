@@ -8,7 +8,7 @@
 class Pawn1 : public Piece {
 public:
     Pawn1(bool side) : Piece(side, "Pawn1"){
-        
+
     }
     
     void getMoves(int pos) override {

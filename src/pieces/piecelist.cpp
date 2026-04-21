@@ -20,12 +20,12 @@ bool isEmpty(int pos){
 }
 
 bool isFriend(int pos, bool side){
-    if (pieceList[pos] != 0 and pieceList[pos]->getSide() == side) return true;
+    if (pieceList.contains(pos) and pieceList[pos]->getSide() == side) return true;
     return false;
 }
 
 bool isEnemy(int pos, bool side){
-    if (pieceList[pos] != 0 and pieceList[pos]->getSide() != side) return true;
+    if (pieceList.contains(pos) and pieceList[pos]->getSide() != side) return true;
     return false;
 }
 

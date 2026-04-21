@@ -19,12 +19,18 @@ int main(void){
 
     SetTargetFPS(60);
 
+    
 	Pawn1* pavel = new Pawn1{1};
 	pieceList[69] = pavel;
 	pavel->getMoves(69);
     std::cout << pavel->getName();
-    GetWorkingDirectory();
-    loadTextures();
+
+    Horse* osel = new Horse(0);
+    pieceList[41] = osel;
+
+    loadTextures(40);
+
+
 
 	
     while (!WindowShouldClose())    
